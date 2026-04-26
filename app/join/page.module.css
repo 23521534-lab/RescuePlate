@@ -1,0 +1,189 @@
+/* ── HERO ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--green);
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+.heroOrg1 {
+  position: absolute;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -90px; left: -80px;
+}
+.heroOrg2 {
+  position: absolute;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  bottom: -60px; right: -50px;
+}
+.heroInner { position: relative; z-index: 2; max-width: 600px; }
+.heroH1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.02;
+  margin: 0.6rem 0 1rem;
+}
+.heroH1 em { font-style: italic; color: var(--green-pale); }
+.heroP {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── CARDS ── */
+.cardsSec { background: var(--cream); padding: 4rem 2rem; }
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.card {
+  background: #fff;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1.5px solid rgba(61,139,55,0.12);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-3px); }
+.cardFeat {
+  border-color: var(--green);
+  background: var(--green-d);
+}
+.cardImg {
+  height: 180px;
+  background: var(--green-pale);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardImgDark { background: var(--green); }
+.cardShape {
+  position: absolute;
+  width: 80%; height: 80%;
+  border-radius: 50% 50% 40% 60%/60% 40% 60% 40%;
+  background: rgba(255,255,255,0.1);
+  top: 10%; left: 10%;
+}
+.cardBody { padding: 2rem; }
+.cardTag {
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.cardFeat .cardTag { color: var(--green-pale); }
+.cardH2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+.cardFeat .cardH2 { color: #fff; }
+.cardP {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+.cardFeat .cardP { color: rgba(255,255,255,0.62); }
+.cardList {
+  list-style: none;
+  margin-bottom: 1.6rem;
+}
+.cardList li {
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 0.28rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.cardList li::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: var(--green);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cardFeat .cardList li { color: rgba(255,255,255,0.7); }
+.cardFeat .cardList li::before { background: var(--green-pale); }
+
+/* ── FORM ── */
+.formSec {
+  background: var(--warm);
+  padding: 5rem 2rem;
+}
+.formWrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.formH2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+.formH2 em { font-style: italic; color: var(--green); }
+.formP { font-size: 0.88rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.65; }
+
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.fg { display: flex; flex-direction: column; gap: 0.35rem; }
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.input, .select {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid rgba(61,139,55,0.2);
+  border-radius: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  background: var(--cream);
+  color: var(--dark);
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.submitBtn {
+  padding: 0.9rem 2rem;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* ── FAQ LIST ── */
+.listSec { background: #fff; padding: 4rem 2rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .cardsGrid { grid-template-columns: 1fr; }
+  .formRow   { grid-template-columns: 1fr; }
+}

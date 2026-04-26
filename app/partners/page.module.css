@@ -1,0 +1,167 @@
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  background: var(--green-d);
+  display: flex;
+  align-items: center;
+}
+.heroOrg1 {
+  position: absolute;
+  width: 380px; height: 380px;
+  border-radius: 45% 55% 60% 40%/50% 45% 55% 50%;
+  background: rgba(255,255,255,0.05);
+  bottom: -100px; right: -70px;
+}
+.heroOrg2 {
+  position: absolute;
+  width: 260px; height: 260px;
+  border-radius: 55% 45% 40% 60%/40% 60% 40% 60%;
+  background: var(--green-l);
+  opacity: 0.15;
+  top: -60px; left: 30%;
+}
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem;
+  max-width: 680px;
+}
+.heroH1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.97;
+  margin: 0.7rem 0 1rem;
+}
+.heroH1 em { font-style: italic; color: var(--green-pale); }
+.heroP {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 480px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.heroStats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.heroStat {}
+.heroStatN {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--green-pale);
+}
+.heroStatL {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.1rem;
+}
+.heroActions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+/* ── BENEFITS ── */
+.benefitsSec {
+  background: #fff;
+  padding: 4rem 2rem;
+}
+
+/* ── BUSINESS TYPES ── */
+.bizSec {
+  background: var(--green-dd);
+  padding: 4.5rem 2rem;
+}
+.bizTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+.bizTitle em { font-style: italic; color: var(--green-pale); }
+.bizGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.bizCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.3rem;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.bizCard:hover {
+  border-color: var(--green-l);
+  transform: translateY(-3px);
+}
+.bizImg {
+  height: 140px;
+  background: var(--green-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.bizImgDark { background: var(--green); }
+.bizShape {
+  position: absolute;
+  width: 80%; height: 80%;
+  border-radius: 50% 50% 40% 60%/60% 40% 60% 40%;
+  background: rgba(255,255,255,0.1);
+}
+.bizBody { padding: 1.3rem; }
+.bizH3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.bizP { font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ── STEPS ── */
+.stepsSec {
+  background: var(--cream);
+  padding: 4rem 2rem;
+}
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  margin-top: 1.8rem;
+}
+.stepCard {
+  background: #fff;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  border: 1px solid rgba(61,139,55,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.stepCard:hover { transform: translateY(-3px); }
+.stepNum {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--green-pale);
+  line-height: 1;
+  margin-bottom: 0.9rem;
+}
+.stepTitle { font-weight: 600; font-size: 0.9rem; color: var(--dark); margin-bottom: 0.45rem; }
+.stepDesc  { font-size: 0.8rem; color: var(--muted); line-height: 1.65; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .heroStats { gap: 1.5rem; }
+  .bizGrid   { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr; }
+}
